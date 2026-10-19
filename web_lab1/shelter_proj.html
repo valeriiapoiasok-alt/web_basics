@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Притулок «Ім'я» </title>
+</head>
+<body>
+
+<!-- Шапка -->
+<p> Меню: <a href="#home">Головна</a> 
+<a href="#history">Історія</a> 
+<a href="#volunteers">Волонтери</a> 
+<a href="#reports">Звіти</a> 
+<a href="#contact">Контакти</a></p>
+<hr>
+
+<!--Головна-->>
+<section id="home">
+  <h1>Головна</h1>
+  <p>Написати мотивуючий заклик</p>
+
+  <h2>Чому нам можна довіряти</h2>
+  <!-- Красиво виділити -->
+  <ul>
+    <li>Ветеринарний догляд, вакцинація, стерилізаці </li>
+    <li>Публічні звіти</li>
+    <li>Волонтери (додати кількість)</li>
+    <li>Співбесіда з усиновлювачами</li>
+  </ul>
+
+  <h2>Фото</h2>
+  <!-- Фото -->
+  <p>[фото кота]</p>
+  <p>[фото собаки]</p>
+  <p>[фото птаха]</p>
+</section>
+
+<!-- Історія притулку -->
+<section id="history" style="display:none">
+  <h1>Історія</h1>
+  <p></p>
+</section>
+
+<!-- Наші волонтери -->
+<section id="volunteers" style="display:none">
+  <h1>Волонтери</h1>
+  <p>Сторінка в розробці.</p>
+</section>
+
+<!-- Звіти -->
+<section id="reports" style="display:none">
+  <h1>Звіти</h1>
+  <p>Цифри ще не зібрані.</p>
+</section>
+
+<!-- Наші контакти -->
+<section id="contact" style="display:none">
+  <h1>Контакти</h1>
+  <p>Адреса: ???</p>
+  <p>Телефон: ???</p>
+  <p>Email: ???</p>
+</section>
+
+<hr>
+<p>© 2026 Притулок «Ім'я»</p>
+
+<script>
+  function show(id) {
+    document.querySelectorAll('section').forEach(s => s.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+  }
+  window.addEventListener('hashchange', () => show(location.hash.slice(1) || 'home'));
+  show(location.hash.slice(1) || 'home');
+</script>
+
+</body>
+</html>
